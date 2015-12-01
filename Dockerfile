@@ -1,11 +1,6 @@
-FROM cloudesire/tomcat:8.0-jre8
+FROM ubuntu
 
-MAINTAINER Rafael Chiavegatto
+MAINTAINER Rafael Chiavegatto <rafael.chiavegatto@fpf.br>
 
-RUN apt-get update && apt-get install -y git &&\
-    git clone https://github.com/chiavegatto/AcademicoMaster.git
-
-
-EXPOSE 8080 
-
-CMD ["/run.sh"]
+RUN apt-get update
+RUN apt-get install -y nginx
